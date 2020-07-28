@@ -6,6 +6,14 @@ packages:
   path: github.com/jiusanzhou/gopkg
   sub:
   - name: cmd
+- name: knife-go
+  path: github.com/jiusanzhou/knife-go
+  sub:
+  - name: config
+  - name: config/options
+  - name: convert
+  - name: pool
+  - name: util
 - name: x
   path: github.com/jiusanzhou/x
   sub:
