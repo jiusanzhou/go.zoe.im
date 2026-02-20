@@ -30,7 +30,7 @@ packages:
   - name: pkg/w32
 - name: unipaw
   path: github.com/jiusanzhou/unipaw
-- name: usehid-go
+- name: usehid
   path: github.com/jiusanzhou/usehid
   sub:
   - name: usehid-go
