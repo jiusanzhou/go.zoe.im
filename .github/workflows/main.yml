@@ -7,23 +7,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-go@v2-beta
+    - uses: actions/checkout@v4
+    - uses: actions/setup-go@v5
       with:
-        go-version: '^1.13'
+        go-version: '^1.21'
     - name: install dependences
       run: |
-        go get -u go.zoe.im/gopkg
+        go install go.zoe.im/gopkg@latest
         echo $GOPATH
-        whereis gopkg
+        which gopkg
       env:
-        GOPATH: /tmp/go
+        GOPATH: /home/runner/go
     - name: generate static content
-      run: /tmp/go/bin/gopkg gen -o . -d
+      run: ~/go/bin/gopkg gen -o . -d
     - name: public content to github
       run: |
         echo Publish to github
         git checkout master
         git add -f --ignore-errors --all
-        git -c user.name='Zoe' -c user.email='hi@zoe.im' commit -m ":tada: release pacakge"
+        git -c user.name='Zoe' -c user.email='hi@zoe.im' commit -m ":tada: release package" || echo "No changes to commit"
         git push -f -q https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git master:gh-pages
