@@ -28,6 +28,12 @@ packages:
   sub:
   - name: cmd/injgo
   - name: pkg/w32
+- name: injx
+  path: github.com/jiusanzhou/injx
+  sub:
+  - name: go
+  - name: go/cmd/injgo
+  - name: go/pkg/w32
 - name: unipaw
   path: github.com/jiusanzhou/unipaw
 - name: usehid
