@@ -21,6 +21,18 @@ packages:
   - name: cli
   - name: cli/opts
   - name: httputil
+- name: proxyhub
+  path: github.com/jiusanzhou/proxyhub
+  sub:
+  - name: cmd/proxyhub
+  - name: pkg/client
+  - name: internal/pool
+  - name: internal/session
+  - name: internal/source
+  - name: internal/server
+  - name: internal/store
+  - name: internal/dashboard
+  - name: internal/metrics
 - name: surferua
   path: github.com/jiusanzhou/surferua
 - name: injgo
