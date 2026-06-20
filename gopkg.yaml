@@ -21,6 +21,10 @@ packages:
   - name: cli
   - name: cli/opts
   - name: httputil
+- name: agentbox
+  path: github.com/jiusanzhou/agentbox
+- name: spore
+  path: github.com/jiusanzhou/spore
 - name: proxyhub
   path: github.com/jiusanzhou/proxyhub
   sub:
